@@ -67,6 +67,7 @@ main {
 }
 
 h2 {
+  margin: 12px 0px;
   color: #93867b;
   font-weight: 400;
   font-size: 1rem;
@@ -91,7 +92,7 @@ hr {
   align-items: center;
 }
 .card_balance .content {
-  width: 100px;
+  width: 110px;
 }
 .card_balance .content h2 {
   color: #f8e9dd;
@@ -119,10 +120,11 @@ hr {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
 }
 
 #statistics {
+  margin-top: 3rem;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -142,10 +144,58 @@ hr {
 }
 
 .statbar {
+  position: relative;
   border-radius: 10px;
   height: 100%;
   width: 3rem;
   background-color: #ec775f;
+}
+
+.statbar::before {
+  content: attr(data-text);
+  position: absolute;
+  right: -1rem;
+  transform: translateY(-110%);
+  /* basic styles */
+  width: 5rem;
+  padding: 10px 5px;
+  border-radius: 10px;
+  background: #382314;
+  color: #f8e9dd;
+  text-align: center;
+  display: none;
+  /* hide by default */
+}
+
+.statbar:hover {
+  filter: brightness(120%);
+}
+
+.statbar:hover::before {
+  display: block;
+}
+
+.card_lower_left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.card_lower_right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+#monthly {
+  font-weight: 700;
+  font-size: 3rem;
+  color: #382314;
+}
+
+#percentage {
+  color: #382314;
 }
 
 .attribution {

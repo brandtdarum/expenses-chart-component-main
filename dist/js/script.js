@@ -20,12 +20,11 @@ function main(data) {
     for(let i = 0; i < data.length; i++) {
         percentage = (data[i].amount/max) * 100;
 
-        if(percentage == 100) {
+        if(percentage == 100)
             document.querySelector("#" + data[i].day + " .statbar").style['background-color'] = "hsl(186, 34%, 60%)";
-            console.log(i);
-        }
-            
+
         document.querySelector("#" + data[i].day + " .statbar").style.height = percentage + "%";
+        document.querySelector("#" + data[i].day + " .statbar").dataset.text = "$"+data[i].amount;
     }
 
     console.log(max);

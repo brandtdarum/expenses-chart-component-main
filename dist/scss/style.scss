@@ -17,6 +17,7 @@ main {
 }
 
 h2 {
+    margin: 12px 0px;
     color: get-neutral(2);
     font-weight: get-font-weight();
     font-size: 1rem;
@@ -48,7 +49,7 @@ hr {
             font-size: 2rem;
             font-weight: get-font-weight("bold");
         }
-        width: 100px;
+        width: 110px;
     }
 
     #logo {
@@ -70,11 +71,12 @@ hr {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
 }
 
 
 #statistics {
+    margin-top: 3rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -96,6 +98,7 @@ hr {
 }
 
 .statbar {
+    position: relative;
     border-radius: 10px;
 
     height: 100%;
@@ -103,6 +106,55 @@ hr {
     background-color: get-primary(1);
 }
 
+.statbar::before {
+    content: attr(data-text);
+    position: absolute;
+
+    right: -1rem;
+    transform:translateY(-110%);
+
+    /* basic styles */
+    width:5rem;
+    padding:10px 5px;
+    border-radius:10px;
+    background:get-neutral(1);
+    color: get-neutral(3);
+    text-align:center;
+
+    display:none; /* hide by default */
+}
+
+.statbar:hover {
+    filter:brightness(120%);
+}
+
+.statbar:hover::before{
+    display:block;
+}
+
+.card_lower_left {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.card_lower_right {
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+#monthly {
+    font-weight: get-font-weight("bold");
+    font-size: 3rem;
+    color: get-neutral(1);
+}
+
+#percentage {
+    color: get-neutral(1);
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
