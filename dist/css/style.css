@@ -1,0 +1,160 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Soft red: hsl(10, 79%, 65%)
+- Cyan: hsl(186, 34%, 60%)
+
+### Neutral
+
+- Dark brown: hsl(25, 47%, 15%)
+- Medium brown: hsl(28, 10%, 53%)
+- Cream: hsl(27, 66%, 92%)
+- Very pale orange: hsl(33, 100%, 98%)
+
+## Typography
+
+### Body Copy
+
+- Font size: 18px
+
+### Font
+
+- Family: [DM Sans](https://fonts.google.com/specimen/DM+Sans)
+- Weights: 400, 700
+*/
+/* COLORS */
+/* FONT */
+/* GET FUNCTIONS */
+body {
+  background-color: #f8e9dd;
+  font-family: "DM Sans", sans-serif;
+}
+
+main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  color: #93867b;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background-color: #f8e9dd;
+}
+
+.card_balance {
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  width: 35%;
+  height: min-content;
+  background-color: #ec775f;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card_balance .content {
+  width: 100px;
+}
+.card_balance .content h2 {
+  color: #f8e9dd;
+}
+.card_balance .content #balance {
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.card_balance #logo {
+  height: 3rem;
+}
+
+.card_analytics {
+  margin-bottom: 3rem;
+  padding: 1.5rem 2rem;
+  width: 35%;
+  height: min-content;
+  border-radius: 20px;
+  background-color: white;
+  width: 35%;
+}
+
+.card_lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#statistics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.statistic_item {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+.statistic_item span {
+  font-size: 0.8rem;
+  color: #93867b;
+}
+
+.statbar {
+  border-radius: 10px;
+  height: 100%;
+  width: 3rem;
+  background-color: #ec775f;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: #3e52a3;
+}
+
+/*# sourceMappingURL=style.css.map */

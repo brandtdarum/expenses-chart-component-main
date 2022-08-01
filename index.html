@@ -7,37 +7,72 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Frontend Mentor | Expenses chart component</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./dist/css/style.css">
 </head>
 <body>
 
-  My balance
-  $921.48
+  <main>
+    <div class="card_balance">
+      <div class="content">
+        <h2>My Balance</h2>
+        <span id="balance">$921.48</span>
+      </div>
+      <img id="logo" src="./images/logo.svg" alt="logo">
+    </div>
 
-  Spending - Last 7 days
+    <div class="card_analytics">
+      <h1>Spending - Last 7 days</h1>
+      <div id="statistics">
+        <div class="statistic_item" id="mon">
+          <div class="statbar"></div>
+          <span>mon</span>
+        </div>
+        <div class="statistic_item" id="tue">
+          <div class="statbar"></div>
+          <span>tue</span>
+        </div>
+        <div class="statistic_item" id="wed">
+          <div class="statbar"></div>
+          <span>wed</span>
+        </div>
+        <div class="statistic_item" id="thu">
+          <div class="statbar"></div>
+          <span>thu</span>
+        </div>
+        <div class="statistic_item" id="fri">
+          <div class="statbar"></div>
+          <span>fri</span>
+        </div>
+        <div class="statistic_item" id="sat">
+          <div class="statbar"></div>
+          <span>sat</span>
+        </div>
+        <div class="statistic_item" id="sun">
+          <div class="statbar"></div>
+          <span>sun</span>
+        </div>
+      </div>
+      <hr>
+      <div class="card_lower">
+        <div class="card_lower_left">
+          <h2>Total this month</h2>
+          <span id="monthly"></span>
+        </div>
+        <div class="card_lower_right">
+          <span class="percentage"></span>
+          <h2>from last month</h2>
+        </div>
+      </div>
+    </div>
+  </main>
 
-  mon
-  tue
-  wed
-  thu
-  fri
-  sat
-  sun
-
-  Total this month
-  $478.33
-
-  +2.4%
-  from last month
-  
   <div class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
+  <script src="./dist/js/script.js"></script>
 </body>
 </html>
